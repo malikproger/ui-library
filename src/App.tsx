@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Button from './components/Button/Button';
+import Input from './components/Input/Input';
 
 function App() {
+  const [nameInput, setNameInput] = useState('');
+  const onChange = (str: string) => {
+    setNameInput(str);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button
+        onClick={() => alert('You clicked on the pink circle!')}
+        children="I'm a pink circle!"
+      />
+      <Input onChange={onChange} name="name" placeholder="Input" value={nameInput} />
     </div>
   );
 }
