@@ -10,15 +10,31 @@
   outline: none;
 }
 
+body {
+  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4);
+}
+
 .App {
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin-top: 10px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
-.btn-modal {
-  border: 1px solid #000;
-  border-radius: 10%;
+.submit_button {
+  background-color: green;
+  color: white;
+  margin-top: 40px;
+  margin-left: 140px;
+}
+
+.close_button {
+  font-size: 20px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  cursor: pointer;
 }
